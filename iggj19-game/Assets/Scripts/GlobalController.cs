@@ -9,7 +9,7 @@ public class GlobalController : MonoBehaviour
     public float playerSpeed = 5f;
 
     public InputModel playerOneModel, playerTwoModel;
-
+    
 
 
     public static GlobalController instance;

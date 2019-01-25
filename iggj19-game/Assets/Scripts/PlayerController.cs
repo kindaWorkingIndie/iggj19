@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour
 
     float moveSpeed;
 
-    public InputModel myInputModel;
-    
+    InputModel myInputModel;
+    public PlayerWaypoints playerWaypoints;
 
+    Transform targetPosition;
+    
     void Start()
     {
         if(playerNumber == PlayerNumber.ONE)
@@ -24,13 +26,51 @@ public class PlayerController : MonoBehaviour
         }
 
         moveSpeed = GlobalController.instance.playerSpeed;
+        targetPosition = playerWaypoints.waypoints[0];
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetKeyDown(myInputModel.up))
+        {
+            GoUp();
+        }
+        if (Input.GetKeyDown(myInputModel.down))
+        {
+            GoDown();
+        }
+        if (Input.GetKeyDown(myInputModel.knock))
+        {
+            Knock();
+        }
+
+        if(transform.position != targetPosition.position)
+        {
+            transform.position = Vector3.Lerp(transform.position, targetPosition.position, moveSpeed);
+        }
+
     }
+
+
+    void GoUp()
+    {
+        targetPosition = playerWaypoints.goUp();
+    }
+
+    void GoDown()
+    {
+        targetPosition = playerWaypoints.goDown();
+    }
+
+    void Knock()
+    {
+
+    }
+
+  
+
+
 }
 
 [System.Serializable]
