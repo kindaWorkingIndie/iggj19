@@ -4,34 +4,54 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum PlayerNumber { ONE,TWO}
+    public enum PlayerNumber { LEFT,RIGHT}
     public PlayerNumber playerNumber;
     public GameObject model;
 
     float moveSpeed;
 
     InputModel myInputModel;
-    public PlayerWaypoints playerWaypoints;
+
+    public List<Transform> waypoints;
+    int currentWaypointIndex;
+
 
     Transform targetPosition;
+    AudioSource knockSource;
+
     
     void Start()
     {
-        if(playerNumber == PlayerNumber.ONE)
+        for(int i = 0; i < GlobalController.instance.flats.Count;i++)
+        {
+            if(playerNumber == PlayerNumber.LEFT)
+            {
+                waypoints.Add(GlobalController.instance.flats[i].leftOutside);
+            }
+            else
+            {
+                waypoints.Add(GlobalController.instance.flats[i].rightOutside);
+            }
+        }
+        knockSource = GetComponent<AudioSource>();
+
+        if(playerNumber == PlayerNumber.LEFT)
         {
             myInputModel = GlobalController.instance.playerOneModel;
-        }else if(playerNumber == PlayerNumber.TWO)
+        }else if(playerNumber == PlayerNumber.RIGHT)
         {
             myInputModel = GlobalController.instance.playerTwoModel;
         }
 
         moveSpeed = GlobalController.instance.playerSpeed;
-        targetPosition = playerWaypoints.waypoints[0];
+        targetPosition = waypoints[0];
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!GlobalController.instance.isCountdownOver()) return;
+
         if (Input.GetKeyDown(myInputModel.up))
         {
             GoUp();
@@ -47,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if(transform.position != targetPosition.position)
         {
-            transform.position = Vector3.Lerp(transform.position, targetPosition.position, moveSpeed);
+            transform.position = Vector3.Lerp(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
         }
 
     }
@@ -55,21 +75,31 @@ public class PlayerController : MonoBehaviour
 
     void GoUp()
     {
-        targetPosition = playerWaypoints.goUp();
+        if (currentWaypointIndex != 0)
+        {
+            currentWaypointIndex--;
+        }
+        targetPosition = waypoints[currentWaypointIndex];
     }
 
     void GoDown()
     {
-        targetPosition = playerWaypoints.goDown();
+        if (currentWaypointIndex + 1 != waypoints.Count)
+        {
+            currentWaypointIndex++;
+        }
+        targetPosition = waypoints[currentWaypointIndex];
     }
 
     void Knock()
     {
+        knockSource.clip = GlobalController.instance.knockSounds[Random.Range(0, GlobalController.instance.knockSounds.Length)];
+        knockSource.Play();
+
+        GlobalController.instance.flats[currentWaypointIndex].Knock(playerNumber);
+
 
     }
-
-    
-  
 
 
 }
