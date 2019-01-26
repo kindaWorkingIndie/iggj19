@@ -159,6 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ae967416e1b4b49b11ed75f91ac476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSound: {fileID: 8300000, guid: 5ad5fcf375a900a47a4205a55bf83440, type: 3}
+  loopSound: {fileID: 8300000, guid: 5e436927443aad24d893f0fa499d0ed1, type: 3}
+  endSound: {fileID: 8300000, guid: 0227f7c883576e849b32b26f901d7e75, type: 3}
   turnOnEvent:
     m_PersistentCalls:
       m_Calls:

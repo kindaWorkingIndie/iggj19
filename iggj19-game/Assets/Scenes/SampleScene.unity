@@ -186,6 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ae967416e1b4b49b11ed75f91ac476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSound: {fileID: 0}
+  loopSound: {fileID: 0}
+  endSound: {fileID: 0}
   turnOnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1168,6 +1171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ae967416e1b4b49b11ed75f91ac476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSound: {fileID: 0}
+  loopSound: {fileID: 0}
+  endSound: {fileID: 0}
   turnOnEvent:
     m_PersistentCalls:
       m_Calls: []

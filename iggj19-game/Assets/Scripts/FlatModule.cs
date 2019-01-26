@@ -52,6 +52,7 @@ public class FlatModule : MonoBehaviour
     {
         isOn = true;
         turnOnEvent.Invoke();
+        StartCoroutine(StartNoise());
     }
     public void turnOff()
     {
