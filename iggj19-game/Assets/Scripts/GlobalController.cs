@@ -67,7 +67,7 @@ public class GlobalController : MonoBehaviour
 
         for(int i = 0; i < flats.Count; i++)
         {
-            FlatModule flatModule = (FlatModule)Instantiate(modulePrefabs[i]);
+            FlatModule flatModule = (FlatModule)Instantiate(modulePrefabs[3]);
             flatModule.transform.position = flats[i].transform.position;
             flatModule.transform.SetParent(flats[i].transform);
             flats[i].flatModule = flatModule;
