@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalController : MonoBehaviour
 {
@@ -43,13 +44,7 @@ public class GlobalController : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
             
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
         }
 
     }
@@ -67,7 +62,10 @@ public class GlobalController : MonoBehaviour
 
         for(int i = 0; i < flats.Count; i++)
         {
-            FlatModule flatModule = (FlatModule)Instantiate(modulePrefabs[3]);
+            int moduleIndex = Random.Range(0, modulePrefabs.Count);
+
+            FlatModule flatModule = (FlatModule)Instantiate(modulePrefabs[moduleIndex]);
+            modulePrefabs.RemoveAt(moduleIndex);
             flatModule.transform.position = flats[i].transform.position;
             flatModule.transform.SetParent(flats[i].transform);
             flats[i].flatModule = flatModule;
@@ -149,6 +147,10 @@ public class GlobalController : MonoBehaviour
             winner = PlayerController.PlayerNumber.RIGHT;
         }
         hud.AnnounceWinner(winner);
+
+        yield return new WaitForSeconds(6);
+        SceneManager.LoadScene("main");
+
     }
 
     public void InstantStartNewFlat()
