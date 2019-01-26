@@ -1222,7 +1222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
@@ -2828,7 +2828,7 @@ GameObject:
   - component: {fileID: 1084380091}
   - component: {fileID: 1084380090}
   m_Layer: 0
-  m_Name: GlobalController
+  m_Name: __GlobalController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2869,6 +2869,7 @@ MonoBehaviour:
   - {fileID: 7337118856145966032, guid: 66cfbe9e364006445b7b3f329475e257, type: 3}
   - {fileID: 5484381038004628089, guid: c4324f7434abc2f44a390df9ca16353a, type: 3}
   - {fileID: 5484381038004628089, guid: 90245f5e21423a04f9944ff06bf923fa, type: 3}
+  - {fileID: 896762248, guid: 3bbf32cee475d274f90d6ea06b3fe9d5, type: 3}
   knockSounds:
   - {fileID: 8300000, guid: 5d8b4fce75765534a8b35c5dba3f3138, type: 3}
   - {fileID: 8300000, guid: 4a8b227a59792394a83df0d440c18333, type: 3}
@@ -2888,7 +2889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102268125
 GameObject:
@@ -4398,7 +4399,7 @@ Transform:
   - {fileID: 1083148147}
   - {fileID: 1915056757}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2108692114 stripped
 Transform:

@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: b6d28f23582ed3f418bbbd84087df990
+guid: b197ce86082a24a468191230519ab8c0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: wardrobe
-    2100002: griff
+    2100000: tisch
+    2100002: tischbein
+    2100004: flasche_oben
+    2100006: flasche_unten
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Cylinder
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
