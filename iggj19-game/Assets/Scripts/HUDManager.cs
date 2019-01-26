@@ -10,10 +10,17 @@ public class HUDManager : MonoBehaviour
     public GameObject waitingScreen;
     public GameObject leftPanel, rightPanel;
     public TextMeshProUGUI leftReadyText, rightReadyText;
+
+    public GameObject winnerScreen;
+    public TextMeshProUGUI winnerTextLeft, winnerTextRight;
+
     private void Start()
     {
+        winnerScreen.gameObject.SetActive(false);
+
         waitingScreen.SetActive(true);
         startCountdown.gameObject.SetActive(false);
+
     }
 
     private void FixedUpdate()
@@ -29,9 +36,16 @@ public class HUDManager : MonoBehaviour
 
     public void StartGame()
     {
+
+        StartCoroutine(SetStartGame());
+    }
+    IEnumerator SetStartGame()
+    {
+        yield return new WaitForSeconds(1);
         waitingScreen.SetActive(false);
         startCountdown.gameObject.SetActive(true);
     }
+
     public void SetCountdown(float countdown)
     {
         if(countdown > 0)
@@ -49,7 +63,9 @@ public class HUDManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        winnerTextLeft.gameObject.SetActive(false);
+        winnerTextRight.gameObject.SetActive(false);
+        winnerScreen.SetActive(true);
     }
 
     public void AnnounceWinner(PlayerController.PlayerNumber playerNumber)
@@ -57,10 +73,12 @@ public class HUDManager : MonoBehaviour
         if (playerNumber == PlayerController.PlayerNumber.LEFT)
         {
             Debug.Log("WINNER IS LEFT");
+            winnerTextLeft.gameObject.SetActive(true);
         }
         else
         {
             Debug.Log("WINNER IS RIGHT");
+            winnerTextRight.gameObject.SetActive(true);
         }
     }
 }

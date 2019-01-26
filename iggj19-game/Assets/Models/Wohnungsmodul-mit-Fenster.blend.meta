@@ -9,12 +9,22 @@ ModelImporter:
     100006: Flur
     100008: Wohnung
     100010: //RootNode
+    100012: Cube_003
+    100014: Sphere
+    100016: Sphere_001
+    100018: Sphere_002
+    100020: Sphere_003
     400000: Cube
     400002: Cube_001
     400004: Cube_002
     400006: Flur
     400008: Wohnung
     400010: //RootNode
+    400012: Cube_003
+    400014: Sphere
+    400016: Sphere_001
+    400018: Sphere_002
+    400020: Sphere_003
     2100000: Material__fussmatte_home_jpg
     2100002: rahmen
     2100004: window
@@ -22,29 +32,85 @@ ModelImporter:
     2100008: floor
     2100010: floor_001
     2100012: inner_wall
+    2100014: light
     2300000: Cube
     2300002: Cube_001
     2300004: Cube_002
     2300006: Flur
     2300008: Wohnung
+    2300010: Cube_003
+    2300012: Sphere
+    2300014: Sphere_001
+    2300016: Sphere_002
+    2300018: Sphere_003
     3300000: Cube
     3300002: Cube_001
     3300004: Cube_002
     3300006: Flur
     3300008: Wohnung
+    3300010: Cube_003
+    3300012: Sphere
+    3300014: Sphere_001
+    3300016: Sphere_002
+    3300018: Sphere_003
     4300000: Cube_002
     4300002: Cube_001
     4300004: Cube
     4300006: Flur
     4300008: Wohnung
+    4300010: Cube_003
+    4300012: Sphere_003
+    4300014: Sphere_002
+    4300016: Sphere_001
+    4300018: Sphere
     6400000: Cube
     6400002: Cube_001
     6400004: Cube_002
     6400006: Flur
     6400008: Wohnung
+    6400010: Cube_003
+    6400012: Sphere
+    6400014: Sphere_001
+    6400016: Sphere_002
+    6400018: Sphere_003
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__fussmatte_home_jpg
+    second: {fileID: 2100000, guid: e441dc98572685946860c83abe8b0452, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: b62a854850b0c054187439c796f98a59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor_001
+    second: {fileID: 2100000, guid: 75c6d804c537f2048accb65da918d3f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: inner_wall
+    second: {fileID: 2100000, guid: d3e80393afbca2b4fb332f031aa7a4f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rahmen
+    second: {fileID: 2100000, guid: 10d0467730b41e443b2381ed7dd8252c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall
+    second: {fileID: 2100000, guid: e98d26f0a70e9004a989918faff99ece, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window
+    second: {fileID: 2100000, guid: ec1fbc477bb0d81428283eb6c0a8da07, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

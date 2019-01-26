@@ -18,9 +18,7 @@ public class Flat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        flatModule = (FlatModule)Instantiate(GlobalController.instance.modulePrefabs[0]);
-        flatModule.transform.position = this.transform.position;
-        flatModule.transform.SetParent(this.transform);
+        
     }
 
     // Update is called once per frame
@@ -39,11 +37,11 @@ public class Flat : MonoBehaviour
     {
         if(playerNumber == PlayerController.PlayerNumber.LEFT)
         {
-            leftDoor.Find("door").gameObject.SetActive(false);
+            leftDoor.Find("door").transform.Rotate(Vector3.up * 90);
         }
         else
         {
-            rightDoor.Find("door").gameObject.SetActive(false);
+            rightDoor.Find("door").transform.Rotate(Vector3.up * -90);
         }
         GlobalController.instance.AddPointForPlayer(playerNumber);
     }

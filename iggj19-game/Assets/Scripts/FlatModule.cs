@@ -6,9 +6,10 @@ using UnityEngine.Events;
 public class FlatModule : MonoBehaviour
 {
     public AudioClip startSound;
-    public AudioClip loopSound;
+    public AudioClip[] loopSounds;
     public AudioClip endSound;
 
+    Animator anim;
 
     AudioSource audioSource;
 
@@ -32,6 +33,7 @@ public class FlatModule : MonoBehaviour
         flat = GetComponentInParent<Flat>();
         audioSource = GetComponent<AudioSource>();
 
+        anim = GetComponent<Animator>();
 
         startPoint = flat.transform.position;
         endPointRight = flat.rightInside.position;
@@ -52,6 +54,7 @@ public class FlatModule : MonoBehaviour
     {
         isOn = true;
         turnOnEvent.Invoke();
+        if (anim != null) anim.SetBool("active", true);
         StartCoroutine(StartNoise());
     }
     public void turnOff()
@@ -59,8 +62,16 @@ public class FlatModule : MonoBehaviour
         isOn = false;
         turnOffEvent.Invoke();
         audioSource.loop = false;
-        if(endSound != null)
-        audioSource.PlayOneShot(endSound);
+        if (endSound != null)
+        {
+            audioSource.PlayOneShot(endSound);
+        }
+        else
+        {
+            audioSource.Stop();
+        }
+
+        if (anim != null) anim.SetBool("active", false);
     }
 
     IEnumerator StartNoise()
@@ -78,8 +89,12 @@ public class FlatModule : MonoBehaviour
         }
         
         audioSource.loop = true;
-        audioSource.clip = loopSound;
-        audioSource.Play();
+        if (loopSounds.Length > 0)
+        {
+            audioSource.clip = loopSounds[Random.Range(0, loopSounds.Length)];
+            audioSource.time = Random.Range(0, audioSource.clip.length / 2);
+            audioSource.Play();
+        }
     }
 
     public void Knock(PlayerController.PlayerNumber playerNumber)
@@ -115,7 +130,7 @@ public class FlatModule : MonoBehaviour
         {
             residentPosition.x += stepSize;
         }
-        resident.transform.position = residentPosition;
+        resident.SetTargetPos(residentPosition);
 
 
     }

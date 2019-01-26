@@ -13,6 +13,7 @@ public class GlobalController : MonoBehaviour
 
     public int playerLeftPoints, playerRightPoints;
 
+    bool setReady;
     bool playersReady;
     public bool playerLeftReady, playerRightReady;
 
@@ -32,8 +33,8 @@ public class GlobalController : MonoBehaviour
     [Header("Timers")]
     float startCountdown = 4;
 
-    float minToNextFlat = 4;
-    float maxToNextFlat = 8;
+    float minToNextFlat = 5;
+    float maxToNextFlat = 10;
     float currentTimer;
     float countingTo;
 
@@ -51,8 +52,6 @@ public class GlobalController : MonoBehaviour
             return;
         }
 
-       
-
     }
     private void Start()
     {
@@ -65,6 +64,14 @@ public class GlobalController : MonoBehaviour
         pRight.GetComponent<PlayerController>().playerNumber = PlayerController.PlayerNumber.RIGHT;
         pRight.transform.position = flats[0].rightOutside.position;
 
+
+        for(int i = 0; i < flats.Count; i++)
+        {
+            FlatModule flatModule = (FlatModule)Instantiate(modulePrefabs[i]);
+            flatModule.transform.position = flats[i].transform.position;
+            flatModule.transform.SetParent(flats[i].transform);
+            flats[i].flatModule = flatModule;
+        }
     }
 
     private void Update()
@@ -75,11 +82,13 @@ public class GlobalController : MonoBehaviour
             if (Input.GetKeyDown(playerOneModel.knock)) playerLeftReady = true;
             if (Input.GetKeyDown(playerTwoModel.knock)) playerRightReady = true;
 
-            if(playerRightReady && playerLeftReady)
+            if(playerRightReady && playerLeftReady && !setReady)
             {
                 hud.StartGame();
+                setReady = true;
+                StartCoroutine(SetReady());
             }
-            playersReady = playerLeftReady && playerRightReady;
+            
             
             return;
         }
@@ -110,10 +119,18 @@ public class GlobalController : MonoBehaviour
         }
 
     }
-
+    IEnumerator SetReady()
+    {
+        yield return new WaitForSeconds(1);
+        playersReady = true;
+    }
     void GameOver()
     {
         gameOver = true;
+        foreach(Flat f in flats)
+        {
+            f.flatModule.turnOff();
+        }
         StartCoroutine(SetGameOver());
         
     }
