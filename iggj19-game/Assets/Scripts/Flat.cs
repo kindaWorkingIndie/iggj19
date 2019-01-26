@@ -39,12 +39,12 @@ public class Flat : MonoBehaviour
     {
         if(playerNumber == PlayerController.PlayerNumber.LEFT)
         {
-
             leftDoor.Find("door").gameObject.SetActive(false);
         }
         else
         {
             rightDoor.Find("door").gameObject.SetActive(false);
         }
+        GlobalController.instance.AddPointForPlayer(playerNumber);
     }
 }

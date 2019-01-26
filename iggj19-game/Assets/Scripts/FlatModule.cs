@@ -23,7 +23,7 @@ public class FlatModule : MonoBehaviour
     Vector3 endPointRight,endPointLeft;
     float stepSize;
 
-    bool moduleClosed;
+    public bool moduleClosed;
     bool isOn;
     // Start is called before the first frame update
     void Start()
@@ -59,15 +59,24 @@ public class FlatModule : MonoBehaviour
         isOn = false;
         turnOffEvent.Invoke();
         audioSource.loop = false;
+        if(endSound != null)
         audioSource.PlayOneShot(endSound);
     }
 
     IEnumerator StartNoise()
     {
-        audioSource.clip = startSound;
-        audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length);
-        audioSource.Stop();
+        if (startSound != null)
+        {
+            audioSource.clip = startSound;
+            audioSource.Play();
+            yield return new WaitForSeconds(audioSource.clip.length);
+            audioSource.Stop();
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+        
         audioSource.loop = true;
         audioSource.clip = loopSound;
         audioSource.Play();
@@ -83,7 +92,8 @@ public class FlatModule : MonoBehaviour
             //RIGHT
             flat.PointFor(PlayerController.PlayerNumber.RIGHT);
             moduleClosed = true;
-            Debug.Log("Right Won");
+            turnOff();
+            GlobalController.instance.InstantStartNewFlat();
             return;
         }
         else if(residentPosition.x <= endPointLeft.x)
@@ -91,7 +101,8 @@ public class FlatModule : MonoBehaviour
             //LEFT
             flat.PointFor(PlayerController.PlayerNumber.LEFT);
             moduleClosed = true;
-            Debug.Log("Left Won");
+            turnOff();
+            GlobalController.instance.InstantStartNewFlat();
             return;
         }
         

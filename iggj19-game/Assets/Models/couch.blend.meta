@@ -1,20 +1,19 @@
 fileFormatVersion: 2
-guid: ed4254338b2170048905ebfee8b97e1a
+guid: 1f7cd690dc6179a448af4f479f4d2529
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: pulli
-    2100002: Material_002
-    2100004: skin
-    2100006: schuh
-    2100008: Hair
-    2100010: Material_001
-    2100012: Material_003
+    2100000: couch_back
+    2100002: couch
+    2100004: foot
+    2100006: lehne
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -68,7 +67,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -95,7 +94,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

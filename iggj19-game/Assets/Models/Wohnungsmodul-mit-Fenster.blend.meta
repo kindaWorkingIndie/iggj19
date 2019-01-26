@@ -1,20 +1,49 @@
 fileFormatVersion: 2
-guid: ed4254338b2170048905ebfee8b97e1a
+guid: 215c240a06b73004c8ae5b73c9160da5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: pulli
-    2100002: Material_002
-    2100004: skin
-    2100006: schuh
-    2100008: Hair
-    2100010: Material_001
-    2100012: Material_003
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube
+    100000: Cube
+    100002: Cube_001
+    100004: Cube_002
+    100006: Flur
+    100008: Wohnung
+    100010: //RootNode
+    400000: Cube
+    400002: Cube_001
+    400004: Cube_002
+    400006: Flur
+    400008: Wohnung
+    400010: //RootNode
+    2100000: Material__fussmatte_home_jpg
+    2100002: rahmen
+    2100004: window
+    2100006: wall
+    2100008: floor
+    2100010: floor_001
+    2100012: inner_wall
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Flur
+    2300008: Wohnung
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Flur
+    3300008: Wohnung
+    4300000: Cube_002
+    4300002: Cube_001
+    4300004: Cube
+    4300006: Flur
+    4300008: Wohnung
+    6400000: Cube
+    6400002: Cube_001
+    6400004: Cube_002
+    6400006: Flur
+    6400008: Wohnung
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -46,9 +75,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 5
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -67,8 +96,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 5
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -95,7 +124,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

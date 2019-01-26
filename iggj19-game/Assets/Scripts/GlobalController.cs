@@ -11,6 +11,13 @@ public class GlobalController : MonoBehaviour
 
     public InputModel playerOneModel, playerTwoModel;
 
+    public int playerLeftPoints, playerRightPoints;
+
+    bool playersReady;
+    public bool playerLeftReady, playerRightReady;
+
+    bool gameOver;
+
     [Header("Flats")]
     public List<Flat> flats;
     int currentlyOn;
@@ -23,7 +30,7 @@ public class GlobalController : MonoBehaviour
     public static GlobalController instance;
     HUDManager hud;
     [Header("Timers")]
-    float startCountdown = 3;
+    float startCountdown = 4;
 
     float minToNextFlat = 4;
     float maxToNextFlat = 8;
@@ -62,6 +69,20 @@ public class GlobalController : MonoBehaviour
 
     private void Update()
     {
+        if (gameOver) return;
+        if (!playersReady) {
+
+            if (Input.GetKeyDown(playerOneModel.knock)) playerLeftReady = true;
+            if (Input.GetKeyDown(playerTwoModel.knock)) playerRightReady = true;
+
+            if(playerRightReady && playerLeftReady)
+            {
+                hud.StartGame();
+            }
+            playersReady = playerLeftReady && playerRightReady;
+            
+            return;
+        }
         if(startCountdown >= 0)
         {
             startCountdown -= Time.deltaTime;
@@ -73,18 +94,95 @@ public class GlobalController : MonoBehaviour
         {
             currentTimer = 0;
             countingTo = Random.Range(minToNextFlat, maxToNextFlat);
-            //TODO: Turn on a flat
-            flats[currentlyOn].flatModule.turnOff();
+            
+            TurnOnNextFlat();
+        }
 
-            currentlyOn = Random.Range(0, flats.Count);
-            flats[currentlyOn].flatModule.turnOn();
+        if(playerLeftPoints > flats.Count / 2)
+        {
+            GameOver();
+            Debug.Log("Player left wins");
+        }
+        if(playerRightPoints > flats.Count / 2)
+        {
+            GameOver();
+            Debug.Log("Player right wins");
         }
 
     }
 
+    void GameOver()
+    {
+        gameOver = true;
+        StartCoroutine(SetGameOver());
+        
+    }
+    IEnumerator SetGameOver()
+    {
+        hud.GameOver();
+        yield return new WaitForSeconds(0.5f);
+        PlayerController.PlayerNumber winner;
+        winner = PlayerController.PlayerNumber.LEFT;
+        if (playerLeftPoints > flats.Count / 2)
+        {
+            winner = PlayerController.PlayerNumber.LEFT;
+        }
+        if (playerRightPoints > flats.Count / 2)
+        {
+            winner = PlayerController.PlayerNumber.RIGHT;
+        }
+        hud.AnnounceWinner(winner);
+    }
+
+    public void InstantStartNewFlat()
+    {
+        currentTimer = 999;
+    }
+
+    void TurnOnNextFlat()
+    {
+        int previouslyOn = currentlyOn;
+        flats[currentlyOn].flatModule.turnOff();
+        if (flats.Count >= 2)
+        {
+            while (currentlyOn == previouslyOn)
+            {
+                int newFlatToTurnOn = Random.Range(0, flats.Count);
+                if (!flats[newFlatToTurnOn].flatModule.moduleClosed)
+                {
+                    currentlyOn = newFlatToTurnOn;
+                }
+
+            }
+        }
+        
+
+
+        flats[currentlyOn].flatModule.turnOn();
+
+    }
+
+
+    public void AddPointForPlayer(PlayerController.PlayerNumber playerNumber)
+    {
+        if(playerNumber == PlayerController.PlayerNumber.LEFT)
+        {
+            playerLeftPoints++;
+
+        }
+        else
+        {
+            playerRightPoints++;
+        }
+    }
 
     public bool isCountdownOver()
     {
         return startCountdown <= 0;
+    }
+
+    public bool isGameOver()
+    {
+        return gameOver;
     }
 }
