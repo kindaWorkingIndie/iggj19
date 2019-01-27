@@ -13,7 +13,7 @@ public class FlatModule : MonoBehaviour
     public int clicksNeeded = 10;
     Animator anim;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     Flat flat;
     Resident resident;

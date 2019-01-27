@@ -52,6 +52,12 @@ public class GlobalController : MonoBehaviour
     }
     private void Start()
     {
+
+        for(int i = 0; i < Input.GetJoystickNames().Length; i++)
+        {
+            Debug.Log(i+". " + Input.GetJoystickNames()[i]);
+        }
+
         hud = FindObjectOfType<HUDManager>();
 
         GameObject pLeft = Instantiate(playerPrefab);
@@ -76,6 +82,7 @@ public class GlobalController : MonoBehaviour
 
     private void Update()
     {
+        
         if (gameOver) return;
         if (!playersReady) {
 
@@ -88,7 +95,6 @@ public class GlobalController : MonoBehaviour
                 setReady = true;
                 StartCoroutine(SetReady());
             }
-            
             
             return;
         }
@@ -130,6 +136,7 @@ public class GlobalController : MonoBehaviour
         foreach(Flat f in flats)
         {
             f.flatModule.turnOff();
+            f.flatModule.audioSource.enabled = false;
         }
         StartCoroutine(SetGameOver());
         
@@ -149,6 +156,7 @@ public class GlobalController : MonoBehaviour
             winner = PlayerController.PlayerNumber.RIGHT;
         }
         hud.AnnounceWinner(winner);
+        GetComponent<AudioSource>().Play();
 
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene("main");

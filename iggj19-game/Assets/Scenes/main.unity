@@ -1688,8 +1688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -190.8}
-  m_SizeDelta: {x: 553.6, y: 553.6}
+  m_AnchoredPosition: {x: -0.0000081062, y: -175}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826763859
 MonoBehaviour:
@@ -2600,8 +2600,6 @@ RectTransform:
   - {fileID: 1110107879}
   - {fileID: 1025997765}
   - {fileID: 1362308812}
-  - {fileID: 1343227427}
-  - {fileID: 1437504041}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2626,6 +2624,11 @@ MonoBehaviour:
   waitingScreen: {fileID: 1025997764}
   leftPanel: {fileID: 60257619}
   rightPanel: {fileID: 353398253}
+  leftInputDisplay: {fileID: 826763859}
+  rightInputDisplay: {fileID: 1266598785}
+  WSD: {fileID: 21300000, guid: 71484897670b6eb4c8c83cc46390d1b0, type: 3}
+  ArrowKeys: {fileID: 21300002, guid: 71484897670b6eb4c8c83cc46390d1b0, type: 3}
+  Xbox: {fileID: 21300000, guid: 5b50e32b64ed4b3489a4c361297a2567, type: 3}
   leftReadyText: {fileID: 1008449204}
   rightReadyText: {fileID: 733231834}
   winnerScreen: {fileID: 1362308811}
@@ -2868,6 +2871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1084380091}
   - component: {fileID: 1084380090}
+  - component: {fileID: 1084380092}
   m_Layer: 0
   m_Name: __GlobalController
   m_TagString: Untagged
@@ -2933,6 +2937,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1084380092
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084380089}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3df06abadd0d93844b820dbf2a5e9268, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1110107878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,8 +3289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: -190.8}
-  m_SizeDelta: {x: 553.6, y: 553.6}
+  m_AnchoredPosition: {x: -0.00021297, y: -175}
+  m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1266598785
 MonoBehaviour:
@@ -3315,17 +3415,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343227426}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1030285342}
-  m_RootOrder: 3
+  m_Father: {fileID: 1362308812}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: 514.9002}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -480, y: -270.4}
+  m_SizeDelta: {x: 315, y: 122.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343227428
 MonoBehaviour:
@@ -3349,8 +3449,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bdc3362aac162d489191fae89c61fb5, type: 2}
+  m_sharedMaterial: {fileID: 21433005325697702, guid: 9bdc3362aac162d489191fae89c61fb5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3382,7 +3483,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 513
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3481,6 +3582,8 @@ RectTransform:
   m_Children:
   - {fileID: 874638405}
   - {fileID: 1798894423}
+  - {fileID: 1343227427}
+  - {fileID: 1437504041}
   m_Father: {fileID: 1030285342}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3670,15 +3773,15 @@ RectTransform:
   m_GameObject: {fileID: 1437504040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999974, y: 0.9999974, z: 0.9999974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1030285342}
-  m_RootOrder: 4
+  m_Father: {fileID: 1362308812}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 859.9999, y: 514.9002}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 480.01007, y: -270.4}
+  m_SizeDelta: {x: 315, y: 122.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1437504042
 MonoBehaviour:
@@ -3702,8 +3805,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bdc3362aac162d489191fae89c61fb5, type: 2}
+  m_sharedMaterial: {fileID: 21433005325697702, guid: 9bdc3362aac162d489191fae89c61fb5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3735,7 +3839,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 516
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4354,7 +4458,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000015259, y: 351.6}
-  m_SizeDelta: {x: 452.9, y: 292.8}
+  m_SizeDelta: {x: 522.7, y: 292.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864170744
 MonoBehaviour:
@@ -4376,8 +4480,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: You are THE JAMITOR! Silence your reckless tenants! Knock on the door faster
-    than your opponent! Silence two rooms to win the game!
+  m_text: 'You are THE JAMITOR!
+
+    Silence your reckless tenants!
+
+    Knock on the door faster than your opponent! Silence two rooms to win the game!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 862d20084b6e47440ba9931a492d8897, type: 2}
   m_sharedMaterial: {fileID: 21122644939907692, guid: 862d20084b6e47440ba9931a492d8897,
@@ -4768,7 +4875,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0.5
+  m_padding: 0
   m_canvasRenderer: {fileID: 2056550504}
   m_TextComponent: {fileID: 1864170744}
   m_materialReferenceIndex: 1

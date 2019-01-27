@@ -9,6 +9,8 @@ public class HUDManager : MonoBehaviour
 
     public GameObject waitingScreen;
     public GameObject leftPanel, rightPanel;
+    public Image leftInputDisplay, rightInputDisplay;
+    public Sprite WSD, ArrowKeys, Xbox;
     public TextMeshProUGUI leftReadyText, rightReadyText;
 
     public GameObject winnerScreen;
@@ -36,6 +38,40 @@ public class HUDManager : MonoBehaviour
         if (GlobalController.instance.playerRightReady) {
             rightReadyText.text = "READY";
         }
+
+        if (waitingScreen.activeSelf)
+        {
+            string[] joysticksConnected = Input.GetJoystickNames();
+            if (joysticksConnected.Length > 0)
+            {
+                for (int i = 0; i < joysticksConnected.Length; i++)
+                {
+
+                    if (joysticksConnected[i].ToUpper().Contains("XBOX"))
+                    {
+                        if (i == 0)
+                        {
+                            leftInputDisplay.sprite = Xbox;
+                        }
+                        if (i == 1)
+                        {
+                            rightInputDisplay.sprite = Xbox;
+                        }
+                    }
+                    else
+                    {
+                        if (i == 0)
+                        {
+                            leftInputDisplay.sprite = WSD;
+                        }
+                        if (i == 1)
+                        {
+                            rightInputDisplay.sprite = ArrowKeys;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public void GoodKnock(PlayerController.PlayerNumber player)
@@ -43,12 +79,12 @@ public class HUDManager : MonoBehaviour
         if(player == PlayerController.PlayerNumber.LEFT)
         {
             leftGoodKnocks++;
-            leftGoodKnocksText.text = leftGoodKnocks.ToString();
+            leftGoodKnocksText.text = "Good knocks\n" + leftGoodKnocks.ToString();
         }
         else
         {
             rightGoodKnocks++;
-            rightGoodKnocksText.text = rightGoodKnocks.ToString();
+            rightGoodKnocksText.text = "Good knocks\n" + rightGoodKnocks.ToString();
         }
     }
     public void StartGame()

@@ -35,21 +35,17 @@ public class PlayerController : MonoBehaviour
                 waypoints.Add(GlobalController.instance.flats[i].rightOutside);
             }
         }
-        if (playerNumber == PlayerNumber.LEFT)
-        {
-            myInputNumber = 1;
-        }
-        else
-        {
-            myInputNumber = 2;
-        }
+       
         knockSource = GetComponent<AudioSource>();
 
         if(playerNumber == PlayerNumber.LEFT)
         {
+            myInputNumber = 1;
             myInputModel = GlobalController.instance.playerOneModel;
-        }else if(playerNumber == PlayerNumber.RIGHT)
+        }
+        else if(playerNumber == PlayerNumber.RIGHT)
         {
+            myInputNumber = 2;
             myInputModel = GlobalController.instance.playerTwoModel;
         }
 
