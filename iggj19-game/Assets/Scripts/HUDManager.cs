@@ -14,6 +14,11 @@ public class HUDManager : MonoBehaviour
     public GameObject winnerScreen;
     public TextMeshProUGUI winnerTextLeft, winnerTextRight;
 
+    bool saidKnockKnock;
+    public AudioClip arnieKnockKnock;
+
+    public TextMeshProUGUI leftGoodKnocksText, rightGoodKnocksText;
+    public int leftGoodKnocks, rightGoodKnocks;
     private void Start()
     {
         winnerScreen.gameObject.SetActive(false);
@@ -33,7 +38,19 @@ public class HUDManager : MonoBehaviour
         }
     }
 
-
+    public void GoodKnock(PlayerController.PlayerNumber player)
+    {
+        if(player == PlayerController.PlayerNumber.LEFT)
+        {
+            leftGoodKnocks++;
+            leftGoodKnocksText.text = leftGoodKnocks.ToString();
+        }
+        else
+        {
+            rightGoodKnocks++;
+            rightGoodKnocksText.text = rightGoodKnocks.ToString();
+        }
+    }
     public void StartGame()
     {
 
@@ -53,7 +70,17 @@ public class HUDManager : MonoBehaviour
             startCountdown.text = countdown.ToString("N0");
         }else if(countdown == 0)
         {
-            startCountdown.text = "KNOCK!";
+            if (!saidKnockKnock)
+            {
+                AudioSource audiosource = GetComponent<AudioSource>();
+                audiosource.clip = arnieKnockKnock;
+                audiosource.loop = false;
+                audiosource.Play();
+
+                saidKnockKnock = true;
+            }
+            startCountdown.text = "KNOCK KNOCK!";
+
         }
         else
         {

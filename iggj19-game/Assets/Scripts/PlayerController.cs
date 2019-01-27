@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameObject model;
 
     float moveSpeed;
-
+    int myInputNumber;
     InputModel myInputModel;
 
     public List<Transform> waypoints;
@@ -19,7 +19,9 @@ public class PlayerController : MonoBehaviour
     Transform targetPosition;
     AudioSource knockSource;
 
-    
+    bool wentUp, wentDown;
+    float vertical;
+    public int clicks;
     void Start()
     {
         for(int i = 0; i < GlobalController.instance.flats.Count;i++)
@@ -32,6 +34,14 @@ public class PlayerController : MonoBehaviour
             {
                 waypoints.Add(GlobalController.instance.flats[i].rightOutside);
             }
+        }
+        if (playerNumber == PlayerNumber.LEFT)
+        {
+            myInputNumber = 1;
+        }
+        else
+        {
+            myInputNumber = 2;
         }
         knockSource = GetComponent<AudioSource>();
 
@@ -52,6 +62,32 @@ public class PlayerController : MonoBehaviour
     {
         if (!GlobalController.instance.isCountdownOver()) return;
 
+        float vAxis = Input.GetAxis("Vertical" + myInputNumber.ToString());
+        vertical = vAxis;
+        if( vAxis > 0.4f)
+        {
+            if (!wentDown)
+            {
+                GoUp();
+                wentDown = true;
+            }
+            
+
+        }else if(vAxis < -0.4f)
+        {
+
+            if (!wentUp)
+            {
+                GoDown();
+                wentUp = true;
+            }
+
+        }else
+        {
+            wentDown = false;
+            wentUp = false;
+        }
+
         if (Input.GetKeyDown(myInputModel.up))
         {
             GoUp();
@@ -60,8 +96,9 @@ public class PlayerController : MonoBehaviour
         {
             GoDown();
         }
-        if (Input.GetKeyDown(myInputModel.knock))
+        if (Input.GetKeyDown(myInputModel.knock) || Input.GetButtonDown("Fire"+myInputNumber.ToString()))
         {
+            clicks++;
             Knock();
         }
 
@@ -97,10 +134,8 @@ public class PlayerController : MonoBehaviour
         knockSource.Play();
 
         GlobalController.instance.flats[currentWaypointIndex].Knock(playerNumber);
-
-
+        
     }
-
 
 }
 
@@ -123,5 +158,12 @@ public class InputModel
     public void SetKnockKey(KeyCode key)
     {
         this.knock = key;
+    }
+
+    public InputModel(KeyCode _up, KeyCode _down, KeyCode _knock)
+    {
+        up = _up;
+        down = _down;
+        knock = _knock;
     }
 }

@@ -30,7 +30,7 @@ public class GlobalController : MonoBehaviour
 
 
     public static GlobalController instance;
-    HUDManager hud;
+    public HUDManager hud;
     [Header("Timers")]
     float startCountdown = 4;
 
@@ -44,8 +44,10 @@ public class GlobalController : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            
+
         }
+       // playerOneModel = new InputModel(KeyCode.Joystick1Button1, KeyCode.Joystick1Button2, KeyCode.Joystick1Button5);
+        //playerTwoModel = new InputModel(KeyCode.Joystick2Button1, KeyCode.Joystick2Button2, KeyCode.Joystick2Button5);
 
     }
     private void Start()
@@ -77,8 +79,8 @@ public class GlobalController : MonoBehaviour
         if (gameOver) return;
         if (!playersReady) {
 
-            if (Input.GetKeyDown(playerOneModel.knock)) playerLeftReady = true;
-            if (Input.GetKeyDown(playerTwoModel.knock)) playerRightReady = true;
+            if (Input.GetKeyDown(playerOneModel.knock) || Input.GetButtonDown("Fire1")) playerLeftReady = true;
+            if (Input.GetKeyDown(playerTwoModel.knock) || Input.GetButtonDown("Fire2")) playerRightReady = true;
 
             if(playerRightReady && playerLeftReady && !setReady)
             {

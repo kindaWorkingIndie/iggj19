@@ -9754,6 +9754,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8b5324acb78d5c46a8082a62ab1586d, type: 3}
   - {fileID: 8300000, guid: 5a3231d03ae38464288b21b653baeb4d, type: 3}
   endSound: {fileID: 0}
+  clicksNeeded: 10
   turnOnEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9798,7 +9799,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9955,10 +9956,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8411535725579262239}
     m_Modifications:
-    - target: {fileID: 100000, guid: 4e158b07acf39cd4da3a02fe20cf9b86, type: 3}
-      propertyPath: m_Name
-      value: carpet
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e158b07acf39cd4da3a02fe20cf9b86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -10002,6 +9999,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 4e158b07acf39cd4da3a02fe20cf9b86, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -34.339
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4e158b07acf39cd4da3a02fe20cf9b86, type: 3}
+      propertyPath: m_Name
+      value: carpet
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 4e158b07acf39cd4da3a02fe20cf9b86, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10097,10 +10098,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8411535725579262239}
     m_Modifications:
-    - target: {fileID: 100004, guid: b286aa742e7df724da0e2c4e26497162, type: 3}
-      propertyPath: m_Name
-      value: ikeaschrank
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b286aa742e7df724da0e2c4e26497162, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.84
@@ -10156,6 +10153,10 @@ PrefabInstance:
     - target: {fileID: 400004, guid: b286aa742e7df724da0e2c4e26497162, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b286aa742e7df724da0e2c4e26497162, type: 3}
+      propertyPath: m_Name
+      value: ikeaschrank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b286aa742e7df724da0e2c4e26497162, type: 3}
@@ -10377,10 +10378,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8411535725579262239}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.41
@@ -10424,6 +10421,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
@@ -10566,10 +10567,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5222174497232915249}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10613,6 +10610,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -10931,10 +10932,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5222174497232915249}
     m_Modifications:
-    - target: {fileID: 100000, guid: 076e76fdcaf833042869ed2eb67f8953, type: 3}
-      propertyPath: m_Name
-      value: trompete
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 076e76fdcaf833042869ed2eb67f8953, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.221
@@ -10990,6 +10987,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 076e76fdcaf833042869ed2eb67f8953, type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 076e76fdcaf833042869ed2eb67f8953, type: 3}
+      propertyPath: m_Name
+      value: trompete
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076e76fdcaf833042869ed2eb67f8953, type: 3}

@@ -9,6 +9,8 @@ public class FlatModule : MonoBehaviour
     public AudioClip[] loopSounds;
     public AudioClip endSound;
 
+
+    public int clicksNeeded = 10;
     Animator anim;
 
     AudioSource audioSource;
@@ -39,7 +41,7 @@ public class FlatModule : MonoBehaviour
         endPointRight = flat.rightInside.position;
         endPointLeft = flat.leftInside.position;
         float distance = endPointRight.x - startPoint.x;
-        stepSize = distance / 20;
+        stepSize = distance / clicksNeeded;
         moduleClosed = false;
         turnOff();
     }
@@ -101,8 +103,8 @@ public class FlatModule : MonoBehaviour
     {
         if (moduleClosed || !isOn) return;
         Vector3 residentPosition = resident.transform.position;
-        
-        if(residentPosition.x >= endPointRight.x)
+        GlobalController.instance.hud.GoodKnock(playerNumber);
+        if (residentPosition.x >= endPointRight.x)
         {
             //RIGHT
             flat.PointFor(PlayerController.PlayerNumber.RIGHT);

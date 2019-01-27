@@ -4994,6 +4994,7 @@ MonoBehaviour:
   loopSounds:
   - {fileID: 8300000, guid: 2ba99a89573ce8b4f9d61bd652a3ad85, type: 3}
   endSound: {fileID: 0}
+  clicksNeeded: 10
   turnOnEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5060,7 +5061,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10061,10 +10062,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.17
@@ -10108,6 +10105,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -44.275
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
@@ -10199,10 +10200,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -10246,6 +10243,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (8)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -10564,10 +10565,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -10611,6 +10608,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (3)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -10996,10 +10997,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9968622
@@ -11043,6 +11040,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (1)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -11361,10 +11362,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -11408,6 +11405,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -11726,10 +11727,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.000821
@@ -11773,6 +11770,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (4)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -12091,10 +12092,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -12138,6 +12135,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (7)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -12456,10 +12457,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -12503,6 +12500,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (11)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -12896,10 +12897,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.77
@@ -12944,6 +12941,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 98.754005
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
 --- !u!4 &878488126 stripped
@@ -12959,10 +12960,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.29
@@ -13007,6 +13004,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 271.244
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
 --- !u!4 &883677726 stripped
@@ -13022,10 +13023,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -13069,6 +13066,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (2)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -13387,10 +13388,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.402
@@ -13435,6 +13432,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -43.724
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
 --- !u!4 &1354427907 stripped
@@ -13450,10 +13451,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.016
@@ -13498,6 +13495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 114.965
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
 --- !u!4 &1488330626 stripped
@@ -13513,10 +13514,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0229478
@@ -13560,6 +13557,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (9)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -13878,10 +13879,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
-      propertyPath: m_Name
-      value: chair (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -13926,6 +13923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 95.02701
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
+      propertyPath: m_Name
+      value: chair (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62eded11c3d95654d800ec713a57753a, type: 3}
 --- !u!4 &1942527494 stripped
@@ -13941,10 +13942,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -13988,6 +13985,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (6)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -14306,10 +14307,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2137610940}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -14353,6 +14350,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani (10)
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
@@ -14809,10 +14810,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1306288439}
     m_Modifications:
-    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
-      propertyPath: m_Name
-      value: char_ani
-      objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14856,6 +14853,10 @@ PrefabInstance:
     - target: {fileID: 400044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
+      propertyPath: m_Name
+      value: char_ani
       objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: e7b838ad5b41a554f9e0ab8ffccb9b14, type: 3}
       propertyPath: m_Bones.Array.data[0]
